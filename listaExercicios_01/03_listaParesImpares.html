@@ -7,10 +7,20 @@
 
     //ENTRADA
 
+    let listaDeNumeros = [1, 4, 6, 8, 898, 7, 43, 2980, 3500, 10];
+    let NumerosPares = [];
+    let NumeroImpar = [];
 
     //PROCESSAMENTO
-
-
-    //SAÍDA
+    for(let numero of listaDeNumeros){
+        if (numero % 2 === 0) {
+            NumerosPares.push(numero)
+        }
+        else{
+            NumeroImpar.push(numero)
+        }
+    }
+    document.write(`Números Pares ${NumerosPares.sort((a,b) => a - b)}, Números Impar ${NumeroImpar.sort((a,b) => a - b)}</br>`)
+    document.write(`Números Pares ${NumerosPares.sort((a,b) => b - a)}, Números Impar ${NumeroImpar.sort((a,b) => b - a)}`)
 
 </script>
