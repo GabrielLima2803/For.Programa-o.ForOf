@@ -3,7 +3,7 @@
     //PROBLEMA
     //Considere a lista de nomes abaixo:
     // let listaDeNomes = ["João Pedro", "Gabriel José", "Ulisses Joao", "Pedro Henrique", "João da Silva", "João Henrique", "Alisson João"];
-    //Identifique todos os nomes que contém "João" em qualquer parte do nome e separe-os em uma lista. Apresente a lista ao final do programa. Considere que poderão haver "Joãos" sem ~ (til).
+    //Identifique todos os nomes que contém "João" em qualquer parte do nome e separe-os em uma lista. Apresente a  lista ao final do programa. Considere que poderão haver "Joãos" sem ~ (til).
 
     //ENTRADA
     let listaDeNomes = ["João Pedro", "Gabriel José", "Ulisses Joao", "Pedro Henrique", "João da Silva", "João Henrique", "Alisson João"];
@@ -11,18 +11,15 @@
     let resto = [];
 
     //PROCESSAMENTO
-
     for(nome of listaDeNomes){
-        const joao = listaDeNomes.search("João")
-
-        if (nome === joao) {
-            listaJoao.push(nome)
+        if (nome.toUpperCase().replace("Ã", "A").search("JOAO") >= 0) {
+            listaJoao.push(nome);
         }
         else{
-            resto.push(nome)
+            resto.push(nome);
         }
     }
-    document.write(listaJoao )
+    document.write(`Nomes Com João: ${listaJoao}, </br> Resto: ${resto}`);
     //SAÍDA
 
 </script>

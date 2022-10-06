@@ -7,10 +7,21 @@
 
     //ENTRADA
 
+    let listaDeNumeros = [1, 2.5, -3, 4, 8.9, 4.789, -25.6, 42];
+    let numeroPositivos = [];
+    let resto = [];
 
     //PROCESSAMENTO
 
+    for (numero of listaDeNumeros){
+        if (numero > 0 && numero % 1 === 0) {
+            numeroPositivos.push(numero)
+        }
+        else{
+            resto.push(numero)
+        }
+    }
 
     //SAÍDA
-
+    document.write(`Numeros Inteiros e Positivos: ${numeroPositivos}</br> Resto: ${resto} <br> Quantidade de números: ${numeroPositivos.length}`)
 </script>
